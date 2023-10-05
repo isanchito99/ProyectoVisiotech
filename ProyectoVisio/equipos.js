@@ -279,18 +279,18 @@ const equipos = [
 
     equipos.forEach((equipo) => {
         const equipoColumn = document.createElement("div");
-        equipoColumn.classList.add("col-md-4", "mb-4");
+        equipoColumn.classList.add("col-md-4", "mb-4","col-sm-5");
 
         const card = document.createElement("div");
-        card.classList.add("card");
+        card.classList.add("card","tamañoCards");
+        card.classList.add("col");
 
         const img = document.createElement("img");
         img.src = equipo.data.img;
-        img.classList.add("card-img-top");
+        img.classList.add("card-img-top","imagenesEquipos");
         img.alt = equipo.data.nombre;
-        //Aplico Estilos
-        img.style.width = "250px"; 
-        img.style.height = "250px"; 
+        //Aplico Estilos a la Imagen
+      
         const cardBody = document.createElement("div");
         cardBody.classList.add("card-body");
 

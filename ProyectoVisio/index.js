@@ -5,8 +5,7 @@ let listaJugadores = [];
 window.onload = async function () {
 
     listaJugadores = await llamarApi();
-    encontrarMejorJugador(listaJugadores);
-    encontrarPeorJugador(listaJugadores);
+   
    
     
 
@@ -74,67 +73,7 @@ function buscarJugador() {
     }
 }
 
-function encontrarMejorJugador(jugadores) {
-    let jugadorMejorPTS = null;
-    let jugadorMejorAST = null;
-    let jugadorMejorBLK = null;
-    let jugadorMejorSTL = null;
-    let jugadorMejorDRB = null;
-    let jugadorMejorORB = null;
-    let jugadorMejorTRRB = null;
-    let jugadorMejorTOV=null;
-    let jugadorMejorEdad=null;
-    let jugadorMejorTRB=null;
-    let jugadorMasMinutos=null;
-    let jugadorMejorPorcentaje2=null;
-    let jugadorMejorPorcentaje3=null; 
 
-    jugadores.results.forEach(jugador => {
-        if (!jugadorMejorPTS || jugador.PTS > jugadorMejorPTS.PTS) {
-            jugadorMejorPTS = jugador;
-        }
-
-        if (!jugadorMejorAST || jugador.AST > jugadorMejorAST.AST) {
-            jugadorMejorAST = jugador;
-        }
-
-        if (!jugadorMejorPTS || jugador.PTS > jugadorMejorPTS.PTS) {
-            jugadorMejorPTS = jugador;
-        }
-    });
-
-    console.log(`El jugador con más puntos es: ${jugadorMejorPTS.player_name} con ${jugadorMejorPTS.PTS} puntos.`);
-    console.log(`El jugador con más asistencias es: ${jugadorMejorAST.player_name} con ${jugadorMejorAST.AST} asistencias.`);
-}
-
-function encontrarPeorJugador(jugadores) {
-    let jugadorPeorPTS = null;
-    let jugadorPeorAST = null;
-    let jugadorPeorBLK = null;
-    let jugadorPeorSTL = null;
-    let jugadorPeorDRB = null;
-    let jugadorPeorORB = null;
-    let jugadorMejorTRRB = null;
-    let jugadorPeorTOV=null;
-    let jugadorPeorEdad=null;
-    let jugadorPeorTRB=null;
-    let jugadorMenosMinutos=null;
-    let jugadorPeorPorcentaje2=null;
-    let jugadorPeorPorcentaje3=null; 
-
-    jugadores.results.forEach(jugador => {
-        if (!jugadorPeorPTS || jugador.PTS < jugadorPeorPTS.PTS && jugadorPeorPTS.games>10) {
-            jugadorPeorPTS = jugador;
-        }
-
-        if (!jugadorPeorAST || jugador.AST < jugadorPeorAST.AST && jugadorPeorPTS.games>10) {
-            jugadorPeorAST = jugador;
-        }
-    });
-
-    console.log(`El jugador con menos puntos es: ${jugadorPeorPTS.player_name} con ${jugadorPeorPTS.PTS} puntos.`);
-    console.log(`El jugador con menos asistencias es: ${jugadorPeorAST.player_name} con ${jugadorPeorAST.AST} asistencias.`);
-}
 
 
 
