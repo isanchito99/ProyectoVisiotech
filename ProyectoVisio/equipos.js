@@ -1,3 +1,4 @@
+// Define un array de objetos que contiene información sobre equipos de baloncesto.
 const equipos = [
     {
         name: 'Hawks',
@@ -274,51 +275,54 @@ const equipos = [
     
   ];
   
-  document.addEventListener("DOMContentLoaded", function () {
-    const equiposList = document.getElementById("equipos-list");
+document.addEventListener("DOMContentLoaded", function () {
+ 
+  const equiposList = document.getElementById("equipos-list");
 
-    equipos.forEach((equipo) => {
-        const equipoColumn = document.createElement("div");
-        equipoColumn.classList.add("col-md-4", "mb-4","col-sm-5");
+  // Itera a través del array de equipos utilizando forEach.
+  equipos.forEach((equipo) => {
+      // Crea un elemento div llamado "equipoColumn" para contener la tarjeta del equipo y aplica clases de Bootstrap.
+      const equipoColumn = document.createElement("div");
+      equipoColumn.classList.add("col-md-4", "mb-4", "col-sm-5");
 
-        const card = document.createElement("div");
-        card.classList.add("card","tamañoCards");
-        card.classList.add("col");
+      // Crea un elemento div llamado "card" para representar la tarjeta del equipo y aplica clases de Bootstrap.
+      const card = document.createElement("div");
+      card.classList.add("card", "tamañoCards");
+      card.classList.add("col");
 
-        const img = document.createElement("img");
-        img.src = equipo.data.img;
-        img.classList.add("card-img-top","imagenesEquipos");
-        img.alt = equipo.data.nombre;
-        //Aplico Estilos a la Imagen
-      
-        const cardBody = document.createElement("div");
-        cardBody.classList.add("card-body");
+      // Crea un elemento img llamado "img" para mostrar la imagen del equipo y establece la fuente (src) y clases de Bootstrap.
+      const img = document.createElement("img");
+      img.src = equipo.data.img;
+      img.classList.add("card-img-top", "imagenesEquipos");
+      img.alt = equipo.data.nombre;
 
-        const cardTitle = document.createElement("h5");
-        cardTitle.classList.add("card-title");
-        cardTitle.textContent = equipo.data.nombre;
-        cardTitle.style.fontWeight = "bold";;
+      // Crea un elemento div llamado "cardBody" para contener el título y la información del equipo y aplica clases de Bootstrap.
+      const cardBody = document.createElement("div");
+      cardBody.classList.add("card-body");
 
-        const cardTextEstadio = document.createElement("p");
-        const cardTextConferencia = document.createElement("p");  
-        cardTextEstadio.textContent = `Estadio: ${equipo.data.estadio} `;
-        cardTextConferencia.textContent= `Conferencia: ${equipo.data.conferencia}`;
+      // Crea un elemento h5 llamado "cardTitle" para mostrar el nombre del equipo en negrita.
+      const cardTitle = document.createElement("h5");
+      cardTitle.classList.add("card-title");
+      cardTitle.textContent = equipo.data.nombre;
+      cardTitle.style.fontWeight = "bold";
 
-        cardBody.appendChild(cardTitle);
-        cardBody.appendChild(cardTextEstadio);
-        cardBody.appendChild(cardTextConferencia);
+      // Crea elementos p para mostrar el estadio y la conferencia del equipo.
+      const cardTextEstadio = document.createElement("p");
+      const cardTextConferencia = document.createElement("p");
+      cardTextEstadio.textContent = `Estadio: ${equipo.data.estadio}`;
+      cardTextConferencia.textContent = `Conferencia: ${equipo.data.conferencia}`;
 
-        card.appendChild(img);
-        card.appendChild(cardBody);
+      // Agrega los elementos al árbol DOM para construir la estructura de la tarjeta.
+      cardBody.appendChild(cardTitle);
+      cardBody.appendChild(cardTextEstadio);
+      cardBody.appendChild(cardTextConferencia);
+      card.appendChild(img);
+      card.appendChild(cardBody);
+      equipoColumn.appendChild(card);
 
-        equipoColumn.appendChild(card);
-        equiposList.appendChild(equipoColumn);
-    });
+      // Agrega la tarjeta a la lista de equipos representada por "equiposList".
+      equiposList.appendChild(equipoColumn);
+  });
 });
-  // Acceder a la información de un equipo específico
-  const equipoCeltics = equipos.find(equipo => equipo.name === 'Celtics');
-  console.log("Nombre del equipo Celtics:", equipoCeltics.data.nombre);
-  console.log("Estadio del equipo Celtics:", equipoCeltics.data.estadio);
-  console.log("Imagen del equipo Celtics:", equipoCeltics.data.img);
-  console.log("Conferencia del equipo Celtics:", equipoCeltics.data.conferencia);
+
   

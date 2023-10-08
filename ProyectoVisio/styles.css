@@ -6,50 +6,84 @@
 
 
 .fondoPagina {
-    /*background-image: url("img/fullteams.jpg");*/
-    background-color: rgb(214, 129, 129);
+    background-image: url("img/fondoPantalla.jpg");
+    /*background-color: rgb(116, 116, 116);*/
     background-position: center;
     min-height: 100vh;
     background-attachment: fixed;
 
 }
-.card-body p{
-margin-bottom: 0px;
+
+.card-body p {
+    margin-bottom: 0px;
 }
 
-.container form{
-    background-color: #ffffff;
+.container form {
+    background-color: #f8f9fa;
     padding: 20px;
     border-radius: 10px;
-    height: 400px;
+    
     width: 400px;
-    margin: 0;
+    margin: 0 auto;
+    text-align: center;
 }
 
-nav ul li:hover{
+
+nav ul li:hover {
     background-color: #ffffff22;
-  
+
 }
-.imagenesEquipos{
-    
-    height : 327px; 
-    display:block;
-    margin-left : auto;
+
+.imagenesEquipos {
+
+    height: 327px;
+    display: block;
+    margin-left: auto;
     margin-right: auto;
     width: auto;
 }
-.tamañoCards{
-    width:auto ;
+
+.tamañoCards {
+    width: auto;
     height: 456px;
-    box-shadow: 5px 5px 10px #091428,3px 2px 5px #282a2e;
-  border: 4px solid black !important;
+    box-shadow: 5px 5px 10px #091428, 3px 2px 5px #282a2e;
+    border: 4px solid black !important;
 }
 
-.tamañoCards:hover{
+.tamañoCards:hover {
     background-color: salmon;
 }
 
+/* Estilo para la tabla */
 
-@media only screen and (max-width: 992px) {
-   
+.oscuridad th {
+    background-color: black !important;
+    color: white;
+    border-color: #ffffff;
 }
+
+span{
+    color: white;
+
+}
+
+#textoCargando{
+
+        color: white;
+    
+}
+
+.rotating-image {
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media only screen and (max-width: 992px) {}

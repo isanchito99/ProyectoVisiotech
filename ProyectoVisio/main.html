@@ -5,14 +5,15 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <title>NBA STADISTICS</title>
 </head>
 
 <body>
    
-
+   
     <div class="fondoPagina">
         <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar" >
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
@@ -38,19 +39,18 @@
         </nav>
     </header>
         <div class="container d-flex align-items-center justify-content-center mt-5">
-            <form>
-                <div class="form-group">
-                    <label for="nombre">Nombre del Jugador</label>
-                    <input type="text" class="form-control" id="nombre" placeholder="">
-        
-        
-                <button type="button" class="btn btn-dark d-flex justify-content-center" onclick="buscarJugador()">BUSCAR</button>
-                
-                <p id="jugadorEncontrado"></p>
-                <p id="datosJugador"></p>
+            <div class="container mt-5">
+                <form>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="nombre" placeholder="" onkeydown="if (event.keyCode === 13) { buscarJugador(); return false; }">
+                    </div>
+                    <button type="button" class="btn btn-dark btn-block" onclick="buscarJugador()">BUSCAR</button>
+                    <p id="jugadorEncontrado"></p>
+                    <p id="datosJugador"></p>
+                </form>
             </div>
-            </form>
         </div>
+        <div id="tablaJugador"></div>
       
     </div>
     
