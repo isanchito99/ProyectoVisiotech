@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otra Página</title>
+</head>
+<body>
+    <div>
+        <p id="equipo-info"></p>
+    </div>
+
+    <script>
+        // Extraigo el parámetro de consulta de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const equipoInfo = urlParams.get('equipoInfo');
+
+        // Muestro la información del equipo en el párrafo
+        const equipoInfoPara = document.getElementById('equipo-info');
+        equipoInfoPara.textContent = equipoInfo;
+    </script>
+</body>
+</html>

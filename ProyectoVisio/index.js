@@ -9,7 +9,9 @@ window.onload = async function () {
 
 
 
-    console.log(listaJugadores.length);
+    listaJugadores.forEach(jugador => {
+        console.log(jugador.team);
+    });
 }
 //FUNCION DONDE RECORREMOS TODAS LAS PAGINACIONES DE LA API
 async function llamarApiTodasLasPaginas() {

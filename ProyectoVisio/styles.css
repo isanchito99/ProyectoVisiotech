@@ -4,6 +4,13 @@
 
 }
 
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 500;
+}
 
 .fondoPagina {
     background-image: url("img/fondoPantalla.jpg");
@@ -22,7 +29,7 @@
     background-color: #f8f9fa;
     padding: 20px;
     border-radius: 10px;
-    
+
     width: 400px;
     margin: 0 auto;
     text-align: center;
@@ -62,15 +69,15 @@ nav ul li:hover {
     border-color: #ffffff;
 }
 
-span{
+span {
     color: white;
 
 }
 
-#textoCargando{
+#textoCargando {
 
-        color: white;
-    
+    color: white;
+
 }
 
 .rotating-image {
@@ -81,6 +88,7 @@ span{
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }

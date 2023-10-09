@@ -11,9 +11,7 @@ window.onload = async function () {
     encontrarPeorJugador(listaJugadores);
     // Ocultar la pantalla de espera y mostrar la tabla
     loadingDiv.style.display = "none";
-    console.log(listaJugadores.length);
-    console.log(listaJugadores.length);
-
+    
 }
 
 function encontrarMejorJugador(jugadores) {
