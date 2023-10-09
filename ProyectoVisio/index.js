@@ -72,6 +72,30 @@ function buscarJugador() {
     }
 }
 
+// Función para buscar jugadores sugeridos a medida que el usuario escribe
+function buscarJugadoresSugeridos() {
+    const inputNombre = document.getElementById('nombre').value.toLowerCase();
+    const jugadoresSugeridos = listaJugadores.filter(jugador => jugador.player_name.toLowerCase().includes(inputNombre));
+
+    const jugadoresSugeridosLista = document.getElementById('jugadoresSugeridos');
+    jugadoresSugeridosLista.innerHTML = ''; // Limpiar la lista de sugerencias
+
+    jugadoresSugeridos.forEach(jugador => {
+        const listItem = document.createElement('li');
+        listItem.classList.add('list-group-item');
+        listItem.textContent = jugador.player_name;
+        listItem.addEventListener('click', () => seleccionarJugadorSugerido(jugador.player_name));
+        jugadoresSugeridosLista.appendChild(listItem);
+    });
+}
+
+// Función para seleccionar un jugador sugerido y mostrar sus estadísticas
+function seleccionarJugadorSugerido(nombreJugador) {
+    document.getElementById('nombre').value = nombreJugador;
+    buscarJugador();
+    document.getElementById('jugadoresSugeridos').innerHTML = ''; // Limpiar la lista de sugerencias
+}
+
 function generarContenidoHTML(jugadorEncontrado) {
     // Crear un elemento table para la tabla
     const tabla = document.createElement("table");

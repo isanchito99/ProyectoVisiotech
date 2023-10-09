@@ -42,12 +42,13 @@
             <div class="container mt-5">
                 <form>
                     <div class="mb-3">
-                        <input type="text" class="form-control" id="nombre" placeholder=""  onkeydown="if (event.keyCode === 13) { buscarJugador(); return false; }">
+                        <input type="text" class="form-control" id="nombre" placeholder=""  oninput="buscarJugadoresSugeridos()"onkeydown="if (event.keyCode === 13) { buscarJugador(); return false; }">
                     </div>
                     <button type="button" class="btn btn-dark btn-block" onclick="buscarJugador()">BUSCAR</button>
                     <p id="jugadorEncontrado"></p>
                     <p id="datosJugador"></p>
                 </form>
+                <ul id="jugadoresSugeridos" class="list-group mt-3"></ul>
             </div>
         </div>
         <div id="tablaJugador"></div>
