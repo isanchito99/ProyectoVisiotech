@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 500;
+}
+
+.fondoPagina {
+    background-image: url("../img/fondoPantalla.jpg");
+    /*background-color: rgb(116, 116, 116);*/
+    background-position: center;
+    min-height: 100vh;
+    background-attachment: fixed;
+
+}
+
+.card-body p {
+    margin-bottom: 0px;
+}
+
+.container form {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+nav ul li:hover {
+    background-color: #ffffff22;
+
+}
+
+.imagenesEquipos {
+
+    height: 327px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+}
+
+.tamañoCards {
+    width: auto;
+    height: 456px;
+    box-shadow: 5px 5px 10px #091428, 3px 2px 5px #282a2e;
+    border: 4px solid black !important;
+}
+
+.tamañoCards:hover {
+    background-color: salmon;
+}
+
+/* Estilo para la tabla */
+
+.oscuridad th {
+    background-color: black !important;
+    color: white;
+    border-color: #ffffff;
+}
+
+span {
+    color: white;
+
+}
+
+#textoCargando {
+
+    color: white;
+
+}
+
+.rotating-image {
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media only screen and (max-width: 992px) {}
