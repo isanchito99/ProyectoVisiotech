@@ -172,19 +172,19 @@ function encontrarPeorJugador(jugadores) {
         if (!jugadorPeorEdad || jugador.age > jugadorPeorEdad.age) {
             jugadorPeorEdad = jugador;
         }
-        //JUGADOR CON MAS REBOTES TOTALES
+        //JUGADOR CON MENOS REBOTES TOTALES
         if (!jugadorPeorTRB || jugador.TRB < jugadorPeorTRB.TRB && jugadorPeorTRB.minutes_played > 200) {
             jugadorPeorTRB = jugador;
         }
-        //JUGADOR CON MÁS MINUTOS JUGADOS
+        //JUGADOR CON MENOS MINUTOS JUGADOS
         if (!jugadorMenosMinutos || jugador.minutes_played < jugadorMenosMinutos.minutes_played && jugadorMenosMinutos.minutes_played > 200) {
             jugadorMenosMinutos = jugador;
         }
-        //JUGADOR CON  MEJOR PORCENTAJE DE TIROS DE 2
+        //JUGADOR CON  PEOR PORCENTAJE DE TIROS DE 2
         if (!jugadorPeorPorcentaje2 || jugador.two_percent < jugadorPeorPorcentaje2.two_percent && jugadorPeorPorcentaje2.field_attempts > 50) {
             jugadorPeorPorcentaje2 = jugador;
         }
-        //JUGADOR CON  MEJOR PORCENTAJE DE TIROS DE 3
+        //JUGADOR CON  PEOR PORCENTAJE DE TIROS DE 3
         if (!jugadorPeorPorcentaje3 || jugador.three_percent < jugadorPeorPorcentaje3.three_percent && jugadorPeorPorcentaje3.field_attempts > 50) {
             jugadorPeorPorcentaje3 = jugador;
         }

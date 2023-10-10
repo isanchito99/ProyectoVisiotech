@@ -94,6 +94,14 @@ span {
     color: white;
 
 }
+#imagen-equipo {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+
+  }
+  
+  
 
 .rotating-image {
     animation: rotate 2s linear infinite;
