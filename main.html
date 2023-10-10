@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <title>NBA STADISTICS</title>
+</head>
+
+<body>
+   
+   
+    <div class="fondoPagina">
+        <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar" >
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="navbar-brand" href="main.html">
+                                <img src="img/logo.png" width="40" height="40" class="d-inline-block align-top" alt="">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="equipos.html">EQUIPOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="estadisticas.html">MEJORES ESTADISTICAS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.sportingnews.com/es/nba?gr=www">PAGINA OFICIAL</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.nbastore.eu/es/?_s=gppc&utm_campaign=NBA+Store+-+Brand+-+Core+-+ES+-+ES|18473079315&utm_medium=ppc&ks_id=7083_kw31647343&utm_term=tienda%20de%20nba&matchtype=e&utm_source=g&target=kwd-317340691336&pcrid=625252612941&adposition=&gclid=EAIaIQobChMI7J7TgsjZgQMV8oVoCR32BwM1EAAYASAAEgL9E_D_BwE">TIENDA</a>
+                        </li>
+                    </ul>
+                </div>
+        
+        </nav>
+    </header>
+        <div class="container d-flex align-items-center justify-content-center mt-5">
+            <div class="container mt-5">
+                <form>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="nombre" placeholder=""  oninput="buscarJugadoresSugeridos()"onkeydown="if (event.keyCode === 13) { buscarJugador(); return false; }">
+                    </div>
+                    <button type="button" class="btn btn-dark btn-block" onclick="buscarJugador()">BUSCAR</button>
+                    <p id="jugadorEncontrado"></p>
+                    <p id="datosJugador"></p>
+                </form>
+                <ul id="jugadoresSugeridos" class="list-group mt-3"></ul>
+            </div>
+        </div>
+        <div id="tablaJugador"></div>
+      
+    </div>
+    
+</body>
+<script  src="index.js"></script>
+
+</html>
