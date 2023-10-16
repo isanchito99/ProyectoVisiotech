@@ -16,10 +16,7 @@ window.onload = async function () {
 
 function encontrarMejorJugador(jugadores) {
     console.log(jugadores);
-    //Variables de creacion de contenido
-    const estadisticaColumn = document.createElement("div");
-    estadisticaColumn.classList.add("col-md-6", "mb-6");
-
+  
     //Variables de estadisticas
     let jugadorMejorPTS = null;
     let jugadorMejorAST = null;

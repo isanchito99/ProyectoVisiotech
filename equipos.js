@@ -322,7 +322,7 @@ async function llamarApiTodasLasPaginas() {
   const firstData = await llamarApi(urlBase);
   listaJugadores.push(...firstData.results);//metemos los jugadores en el array
 
-  console.log(await llamarApi(urlBase));
+  
   let currentPage = 2;
   let totalPages = 7;
   //HACEMOS UN BUCLE DONDE RECORREMOS LA API POR PAGINACIONES Y VAMOS INSERTANDO LOS JUGADORES DE CADA PAGINACIÓN
@@ -332,7 +332,7 @@ async function llamarApiTodasLasPaginas() {
 
     if (data.results) {
       listaJugadores.push(...data.results);
-      console.log(listaJugadores);
+      
     }
 
     if (data.pages && data.pages.total) {
@@ -372,7 +372,7 @@ function jugadoresEquipo() {
     // Agregar el jugador al array correspondiente al equipo.
     jugadoresPorEquipo[equipoAcronimo].push(jugador);
   });
-  console.log(jugadoresPorEquipo)
+ 
 
   // El objeto jugadoresPorEquipo ahora contiene a los jugadores agrupados por equipo.
   return jugadoresPorEquipo;
@@ -388,14 +388,10 @@ function mostrarEquiposConJugadores() {
   equipos.forEach((equipo) => {
     const equipoAcronimo = equipo.data.acronimo;
     const jugadoresEquipo = jugadoresPorEquipo[equipoAcronimo];
-
-    // Mostrar el nombre del equipo en la consola
-    //console.log(`Equipo: ${equipo.data.nombre}`);
-
     // Mostrar los jugadores del equipo en la consola
     if (jugadoresEquipo) {
       jugadoresEquipo.forEach((jugador) => {
-      //  console.log(`Jugador: ${jugador.player_name}`);
+      
       });
     } else {
       console.log("No hay jugadores para este equipo.");

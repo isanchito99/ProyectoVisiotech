@@ -53,7 +53,8 @@ nav ul li:hover {
 }
 
 .container ul :hover{
-background-color: lightcoral;
+background-color: black;
+color: white;
 }
 
 .imagenesEquipos {
@@ -66,6 +67,7 @@ background-color: lightcoral;
 }
 
 .tamañoCards {
+    cursor: pointer;
     width: auto;
     height: 456px;
     box-shadow: 5px 5px 10px #091428, 3px 2px 5px #282a2e;
@@ -101,8 +103,13 @@ span {
 
   }
   
-  
+#puntosMediaEquipo p{
+    padding-top: 10px;
+}
 
+#edadMediaEquipo  p{
+    padding-top: 10px;
+}
 .rotating-image {
     animation: rotate 2s linear infinite;
 }

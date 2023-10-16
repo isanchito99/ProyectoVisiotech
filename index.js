@@ -13,6 +13,8 @@ window.onload = async function () {
     listaJugadores.forEach(jugador => {
         console.log(jugador.team);
     });
+    const inputNombre = document.getElementById('nombre');
+    inputNombre.addEventListener('click', borrarTablaYJugadoresSugeridos);
 }
 //FUNCION DONDE RECORREMOS TODAS LAS PAGINACIONES DE LA API
 async function llamarApiTodasLasPaginas() {
@@ -56,6 +58,7 @@ async function llamarApi(url) {
 }
 //FUNCIÓN PARA BUSCAR EL JUGADOR QUE INSERTEMOS EN EL INPUT DENTRO DEL ARRAY DE JUGADORES QUE HEMOS RECORRIDO ANTES
 function buscarJugador() {
+   
     const inputNombre = document.getElementById('nombre').value;//coge el dato del input nombre
     const jugadorEncontrado = listaJugadores.find(jugador => jugador.player_name.toLowerCase() === inputNombre.toLowerCase());
     const contenedorResultados = document.querySelector("#tablaJugador");//cogemos el query para insertar los datos
@@ -92,15 +95,22 @@ function buscarJugadoresSugeridos() {
 
 // Función para seleccionar un jugador sugerido y mostrar sus estadísticas
 function seleccionarJugadorSugerido(nombreJugador) {
+   
     document.getElementById('nombre').value = nombreJugador;
     buscarJugador();
     document.getElementById('jugadoresSugeridos').innerHTML = ''; // Limpiar la lista de sugerencias
+}
+function borrarTablaYJugadoresSugeridos() {
+    const contenedorResultados = document.querySelector("#tablaJugador");
+    contenedorResultados.innerHTML = "";
+    const jugadoresSugeridosLista = document.getElementById('jugadoresSugeridos');
+    jugadoresSugeridosLista.innerHTML = '';
 }
 
 function generarContenidoHTML(jugadorEncontrado) {
     // Crear un elemento table para la tabla
     const tabla = document.createElement("table");
-    tabla.classList.add("table", "table-light", "table-hover", "table-striped");
+    tabla.classList.add("table", "table-light", "table-hover", "table-striped","border","border-dark");
     tabla.style.textAlign = "center";
     const encabezadoTabla = document.createElement("th");
     encabezadoTabla.textContent = jugadorEncontrado.player_name;
